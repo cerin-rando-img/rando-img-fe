@@ -1,6 +1,6 @@
 import { combineReducer } from 'redux';
-import images from './pokemonReducer';
+import pokemonImg from './pokemonReducer';
 
 export default combineReducer({
-  images
+  pokemonImg
 });

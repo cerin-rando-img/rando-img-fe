@@ -8,7 +8,7 @@ import { fetchImage } from '../action/pokemonAction';
 class PokemonImage extends Component {
   static propTypes = {
     fetch: PropTypes.func.isRequired,
-    image: PropTypes.array.isRequired,
+    pokemonImg: PropTypes.object.isRequired,
     loading: PropTypes.bool.isRequired
   }
 
@@ -17,15 +17,15 @@ class PokemonImage extends Component {
   }
 
   render() {
-    const { image, loading } = this.props;
+    const { pokemonImg, loading } = this.props;
     if(loading) return <h1>LOADING</h1>;
 
-    return <Image image={image} />;
+    return <Image image={pokemonImg} />;
   }
 }
 
 const mapStateToProps = state => ({
-  image: getImage(state),
+  pokemonImg: getImage(state),
   loading: getImageLoading(state)
 });
 

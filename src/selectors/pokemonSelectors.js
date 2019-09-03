@@ -1,3 +1,3 @@
-export const getImage = state => state.image;
-export const getImageLoading = state => state.image.loading;
-export const getImageError = state => state.image.error;
+export const getImage = state => state.pokemonImg.image;
+export const getImageLoading = state => state.pokemonImg.loading;
+export const getImageError = state => state.pokemonImg.error;
