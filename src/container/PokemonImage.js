@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import Image from '../components/image';
 import { getImage, getImageLoading } from '../selectors/pokemonSelectors';
 import { fetchImage } from '../action/pokemonAction';
+import Load from '../components/image/Load';
 
 class PokemonImage extends Component {
   static propTypes = {
@@ -20,7 +21,12 @@ class PokemonImage extends Component {
     const { pokemonImg, loading } = this.props;
     if(loading) return <h1>LOADING</h1>;
 
-    return <Image image={pokemonImg} />;
+    return (
+      <div>
+        <Image image={pokemonImg} />
+        <Load handleClick={fetch} />
+      </div>
+    );
   }
 }
 
