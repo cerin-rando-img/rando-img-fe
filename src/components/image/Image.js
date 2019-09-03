@@ -18,3 +18,5 @@ Image.propTypes = {
   }).isRequired
 };
 
+export default Image;
+
