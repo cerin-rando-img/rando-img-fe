@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import Image from '../components/image';
+import Image from '../components/image/Image';
 import { getImage, getImageLoading } from '../selectors/pokemonSelectors';
 import { fetchImage } from '../action/pokemonAction';
 import Load from '../components/image/Load';
@@ -17,8 +17,10 @@ class PokemonImage extends Component {
     this.props.fetch();
   }
 
+
+
   render() {
-    const { pokemonImg, loading } = this.props;
+    const { pokemonImg, loading, fetch } = this.props;
     if(loading) return <h1>LOADING</h1>;
 
     return (

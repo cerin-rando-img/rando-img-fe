@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 function Image({ image }) {
   return (
     <>
-     <img src={image.image_url} />
+     <img src={image.url_image} />
      <h3>{image.pokemon}</h3>
     </>
   );
@@ -12,9 +12,9 @@ function Image({ image }) {
 
 Image.propTypes = {
   image: PropTypes.shape({
-    _id: PropTypes.number.isRequired,
+    _id: PropTypes.string.isRequired,
     pokemon: PropTypes.string.isRequired,
-    image_url: PropTypes.string.isRequired
+    url_image: PropTypes.string.isRequired
   }).isRequired
 };
 
